@@ -1,4 +1,8 @@
-# SOK Development Guidelines
+# SOK Development Guidelines 
+
+<img src="assets/calms.png" title="SOK C.A.L.M.S." alt="C.A.L.M.S." style="float: right; margin: 0px 0px 30px 30px" />
+
+![Latest version](https://img.shields.io/github/v/tag/s-group-dev/development-guidelines)
 
 This is a high-level documentation containing a collection of best practices, commonalities between projects and values proven to be practical. We're encouraging our own teams to follow these guidelines when implementing their software. Guidelines are developed by SOK development community.
 

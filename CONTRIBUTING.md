@@ -9,6 +9,7 @@
 When adding new changes, one should always also add an entry to changelog.
 
 While doing so, please respect the following scheme:
+
 - Adding a new rule increases MINOR version
 - Modifying some existing rule, but not changing its semantics increases PATCH version
 -  When doing incompatible changes, eg. moving existing rules from section to another, increase MAJOR version
