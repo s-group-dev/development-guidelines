@@ -2,7 +2,7 @@
 ---
 title: "SOK Development Guidelines"
 author: [Development Community]
-date: "2017-02-20"
+date: "YYYY-MM-DD"
 keywords: [development, guidelines]
 lang: "en"
 subtitle: |
@@ -19,7 +19,7 @@ titlepage-color: "02A946"
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "FFFFFF"
 titlepage-rule-height: 3
-footer-center: "v1.0.0"
+footer-center: "vX.Y.Z"
 
 footnotes-pretty: true
 book: false
