@@ -14,4 +14,4 @@ While doing so, please respect the following scheme:
 - Modifying some existing rule, but not changing its semantics increases PATCH version
 -  When doing incompatible changes, eg. moving existing rules from section to another, increase MAJOR version
 
-Versioning does not have any previx and starts from `1.0.0`.
+Versioning has `v` prefix and starts from `v1.0.0`.
