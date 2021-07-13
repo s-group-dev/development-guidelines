@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := help
 
-_dv_regex = grep '\d\d\d\d-\d\d-\d\d \[v\d\+\.\d\+\.\d\+\]' CHANGELOG.md
+_dv_regex = grep '\d\d\d\d-\d\d-\d\d \[v\d\+\.\d\+\.\d\+\]' CHANGELOG.md | head -1
 _dv_sed = sed 's|^\#* \(.*\) \[\(.*\)\]|\1 \2|'
 
 DATE = $$($(_dv_regex) | $(_dv_sed) | cut -d' ' -f1)
@@ -39,3 +39,7 @@ build-html: pre-build ## Build HTML version of document
 		--standalone build/title.md build/logo.md src/DEVELOPMENT-GUIDELINES.md \
 		--number-sections
 	ln -sf SOK-DG${VERSION}.html releases/latest.html
+
+release:
+	@git tag $$(echo ${VERSION} | sed 's|^v||')
+	@git tag -n | head -1
