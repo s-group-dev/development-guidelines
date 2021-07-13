@@ -1,5 +1,7 @@
 # SOK Development Guidelines  ![Latest version](https://img.shields.io/github/v/tag/s-group-dev/development-guidelines)
 
+[![Download PDF](https://img.shields.io/badge/Download-PDF-1A7EBF)](https://github.com/s-group-dev/development-guidelines/blob/master/releases/SOK-DGv1.0.0.pdf)
+[![Download HTML](https://img.shields.io/badge/Download-HTML-26A0EE)](https://htmlpreview.github.io/?https://github.com/s-group-dev/development-guidelines/blob/master/releases/SOK-DGv1.0.0.html)
 <img src="assets/calms.png" title="SOK C.A.L.M.S." alt="C.A.L.M.S." align="right" style="margin: 0px 0px 30px 30px" />
 
 This is a high-level documentation containing a collection of best practices, commonalities between projects and values proven to be practical. We're encouraging our own teams to follow these guidelines when implementing their software. Guidelines are developed by SOK development community.
@@ -11,6 +13,10 @@ Following these guidelines promotes good adoption of our way of implementing sof
 ## Usage
 
 Feel free to use these guidelines as your guidance while implementing  software. Our own teams are. As standard can feel good, history proves that better conventions are to follow. As such, you should consider this to be a living document. Please see [CHANGELOG.md](CHANGELOG.md).
+
+## More Resouces
+
+- [Contributing](CONTRIBUTING.md)
 
 ## LICENSE
 
