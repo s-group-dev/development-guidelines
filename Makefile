@@ -42,4 +42,4 @@ build-html: pre-build ## Build HTML version of document
 
 release:
 	@git tag $$(echo ${VERSION} | sed 's|^v||')
-	@git tag -n | head -1
+	@git tag -n | tail -1
