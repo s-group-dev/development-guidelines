@@ -7,3 +7,10 @@
 
 - MUST use version control
 - SHOULD use Git
+- MUST use `master` branch as a base for development
+
+# Release Management
+
+- SHOULD release to production from branch that's used for base of development
+- MUST have identifiable releases
+- RECOMMENDED to release smaller changes often over larger merges
