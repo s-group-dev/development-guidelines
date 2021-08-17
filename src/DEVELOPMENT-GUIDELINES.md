@@ -47,18 +47,27 @@
 ## Design
 
 - SHOULD name AWS profiles after account-aliases
+- MUST have production separated from testing environments
 
 # Architecture
 
 ## Infrastructure
 
 - SHOULD use semantic versioned Docker images for building releases
+- MUST have centralised logging
+- SHOULD collect logs from all deployed environments
 
 ## Security
 
 - MUST run automated vulnerability checks for code
 - SHOULD run automated static code analysis for code quality
 
+# Operations
+
+## Monitoring
+
+- MUST have monitoring
+- MUST have alarms
 
 # Guidance
 
@@ -68,3 +77,4 @@
 
 - SHOULD use README.md as a central information document inside code repository
 - SHOULD document all exceptions with reasoning from Development Guidelines in project's README.md
+- MUST have a documented disaster recovery plan

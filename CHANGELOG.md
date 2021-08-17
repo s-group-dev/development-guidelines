@@ -4,6 +4,14 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2020-10-07 [v1.5.0]
+### Added
+- Operations → Monitoring → MUST have alarms
+- Guidance → Documentation → MUST have a documented disaster recovery plan
+- Environments → Design → MUST have production separated from testing environments
+- Architecture → Infrastructure → MUST have centralised logging
+- Architecture → Infrastructure → SHOULD collect logs from all deployed environments
+
 ## 2020-10-02 [v1.4.0]
 ### Added
 - Architecture → Security → MUST run automated vulnerability checks for code
