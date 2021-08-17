@@ -60,6 +60,7 @@
 
 - SHOULD name AWS profiles after account-aliases
 - MUST have production separated from testing environments
+- SHOULD follow the Principle of Least Privilege
 
 # Architecture
 
@@ -71,6 +72,11 @@
 - SHOULD use semantic versioned Docker images for building releases
 - MUST have centralised logging
 - SHOULD collect logs from all deployed environments
+- MUST use tags on cloud resources
+- MUST have all virtual machines managed by CSP's instance management service (AWS Systems Manager, Azure Automanage, ...)
+- SHOULD use cloud managed services whenever possible
+- MUST have periodical OS updates for all services not managed by cloud
+- MUST document manually managed virtual machines' maintenance and security processes
 
 ## Security
 
