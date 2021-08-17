@@ -26,6 +26,7 @@
 - SHOULD release to production from branch that's used for base of development
 - MUST have identifiable releases
 - RECOMMENDED to release smaller changes often over larger merges
+- MUST have (at least) following stages in pipeline (in recommended order): install, test, scan, build, deploy, verify, release
 
 ## Mobile Development
 
@@ -39,8 +40,19 @@
 
 - SHOULD preserve all release artefacts forever
 
+## Design
+
+- SHOULD name AWS profiles after account-aliases
+
 # Architecture
 
 ## Infrastructure
 
 - SHOULD use semantic versioned Docker images for building releases
+
+# Guidance
+
+## Documentation
+
+- SHOULD use README.md as a central information document inside code repository
+- SHOULD document all exceptions with reasoning from Development Guidelines in project's README.md
