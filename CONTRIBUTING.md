@@ -4,6 +4,13 @@
 
 *DON'T* push to the master branch directly. Always use pull requests and have at least two reviewer approvals.
 
+## Content
+
+1. Modify [DEVELOPMENT-GUIDELINES.md](build/DEVELOPMENT-GUIDELINES.md) with latest changes.
+2. Update [CHANGELOG.md](CHANGELOG.md) accordingly with proper versioning.
+3. Run `make build && make release`
+4. Push your changes and create Merge Request to [GitHub](https://github.com/s-group-dev/development-guidelines).
+
 ## Versioning
 
 When adding new changes, one should always also add an entry to changelog.
