@@ -6,7 +6,7 @@ date: "YYYY-MM-DD"
 keywords: [development, guidelines]
 lang: "en"
 subtitle: |
-	*A handbook created by developers for developers to help engineering teams to align their software practices and share know-how.*
+	*A handbook created by developers for developers to help engineering teams align their software practices and share know-how.*
 
 logo: "assets/S-Logo-White.png"
 logo-width: 100mm
