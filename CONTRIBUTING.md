@@ -12,6 +12,7 @@
 4. Add files and run `git commit`
 5. Run `make release`
 6. Push your changes and create Merge Request to [GitHub](https://github.com/s-group-dev/development-guidelines).
+7. Run `git push origin --tags`
 
 ## Versioning
 
