@@ -8,10 +8,12 @@
 - MUST use version control
 - SHOULD use Git
 - MUST use `master` branch as a base for development
+- MUST have documented version control flow
 
 ### Branching
 
 - MUST fork feature (and release) branches from `master` branch
+- SHOULD protect default branch from pushes
 
 #### Mobile development
 
@@ -20,7 +22,9 @@
 - RECOMMENDED to squash feature branches before merging to `master` branch
 - MUST preserve release tags forever
 
+## Coding Standards
 
+- MUST agree on a coding standard inside a team
 # Release Management
 
 - SHOULD release to production from branch that's used for base of development
@@ -50,7 +54,15 @@
 
 - SHOULD use semantic versioned Docker images for building releases
 
+## Security
+
+- MUST run automated vulnerability checks for code
+- SHOULD run automated static code analysis for code quality
+
+
 # Guidance
+
+- MUST have process how to handle security notifications
 
 ## Documentation
 
