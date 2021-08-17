@@ -4,6 +4,16 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2020-11-24 [v1.7.0]
+### Added
+- Codebase → Coding Standards → SHOULD use automatic code style checking (linting)
+- Codebase → Architecture → MUST have only needed components in production (resources, interfaces, dependencies)
+- Architecture → MUST document all intentionally integrated 3rd party provided services used by the application
+- Architecture → MUST document selected development management tools and purpose of tools
+- Quality Assurance → Automation → MUST have some automatic tests for the service that are repeatable
+- Quality Assurance → Automation → RECOMMENDED to run tests for all code changes
+- Quality Assurance → Documentation → SHOULD have documented test strategy and which parts of codebase are tested
+
 ## 2020-11-10 [v1.6.0]
 ### Added
 - Codebase → Peer Review → MUST have a process for peer review

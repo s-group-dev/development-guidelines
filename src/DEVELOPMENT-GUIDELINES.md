@@ -31,6 +31,11 @@
 
 - MUST agree on a coding standard inside a team
 - RECOMMENDED use automatic code formatting
+- SHOULD use automatic code style checking (linting)
+
+## Architecture
+
+- MUST have only needed components in production (resources, interfaces, dependencies)
 
 # Release Management
 
@@ -57,6 +62,9 @@
 - MUST have production separated from testing environments
 
 # Architecture
+
+- MUST document all intentionally integrated 3rd party provided services used by the application
+- MUST document selected development management tools and purpose of tools
 
 ## Infrastructure
 
@@ -85,3 +93,14 @@
 - SHOULD use README.md as a central information document inside code repository
 - SHOULD document all exceptions with reasoning from Development Guidelines in project's README.md
 - MUST have a documented disaster recovery plan
+
+# Quality Assurance
+
+## Automation
+
+- MUST have some automatic tests for the service that are repeatable
+- RECOMMENDED to run tests for all code changes
+
+## Documentation
+
+- SHOULD have documented test strategy and which parts of codebase are tested
