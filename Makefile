@@ -41,5 +41,12 @@ build-html: pre-build ## Build HTML version of document
 	ln -sf SOK-DG${VERSION}.html releases/latest.html
 
 release:
+	git add CHANGELOG.md
+	git add src/DEVELOPMENT-GUIDELINES.md
+	git add releases/latest.html
+	git add releases/latest.pdf
+	git add releases/SOK-DG${VERSION}.html
+	git add releases/SOK-DG${VERSION}.pdf
+	git commit -m "Release $$(echo ${VERSION} | sed 's|^v||')"
 	@git tag $$(echo ${VERSION} | sed 's|^v||')
 	@git tag -n | tail -1

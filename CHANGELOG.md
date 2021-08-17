@@ -4,6 +4,15 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2020-10-02 [v1.4.0]
+### Added
+- Architecture → Security → MUST run automated vulnerability checks for code
+- Architecture → Security → SHOULD run automated static code analysis for code quality
+- Guidance → MUST have process how to handle security notifications
+- Codebase → Version Control → MUST have documented version control flow
+- Codebase → Version Control → Branching → SHOULD protect default branch from pushes
+- Codebase → Coding Standards → MUST agree on a coding standard inside a team
+
 ## 2020-06-17 [v1.3.0]
 ### Added
 - Release Management → MUST have (at least) following stages in pipeline (in recommended order): install, test, scan, build, deploy, verify, release
