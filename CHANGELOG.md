@@ -4,6 +4,13 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2020-06-17 [v1.3.0]
+### Added
+- Release Management → MUST have (at least) following stages in pipeline (in recommended order): install, test, scan, build, deploy, verify, release
+- Environments → Design → SHOULD name AWS profiles after account-aliases
+- Guidance → Documentation → SHOULD use README.md as a central information document inside code repository
+- Guidance → Documentation → SHOULD document all exceptions with reasoning from Development Guidelines in project's README.md
+
 ## 2020-03-17 [v1.2.0]
 ### Added
 - Codebase → Version Control → Branching → MUST fork feature (and release) branches from master branch
