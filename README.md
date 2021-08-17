@@ -6,6 +6,8 @@
 
 This is a high-level documentation containing a collection of best practices, commonalities between projects and values proven to be practical. We're encouraging our own teams to follow these guidelines when implementing their software. Guidelines are developed by SOK development community.
 
+See [Pages](https://s-group-dev.github.io/development-guidelines/) version of this content.
+
 ## Motivation
 
 Following these guidelines promotes good adoption of our way of implementing software, reduces friction between teams and answers to many commonly asked questions. By implementing this standard it also helps to improve our software development quality and speed and share know-how.
