@@ -4,8 +4,15 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2020-11-10 [v1.6.0]
+### Added
+- Codebase → Peer Review → MUST have a process for peer review
+- Codebase → Peer Review → SHOULD have another developer to approve code changes before executed in production
+- Codebase → Coding Standards → RECOMMENDED use automatic code formatting
+
 ## 2020-10-07 [v1.5.0]
 ### Added
+- Operations → Monitoring → MUST have monitoring
 - Operations → Monitoring → MUST have alarms
 - Guidance → Documentation → MUST have a documented disaster recovery plan
 - Environments → Design → MUST have production separated from testing environments

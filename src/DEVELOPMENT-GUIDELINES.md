@@ -22,9 +22,16 @@
 - RECOMMENDED to squash feature branches before merging to `master` branch
 - MUST preserve release tags forever
 
+## Peer Review
+
+- MUST have a process for peer review
+- SHOULD have another developer to approve code changes before executed in production
+
 ## Coding Standards
 
 - MUST agree on a coding standard inside a team
+- RECOMMENDED use automatic code formatting
+
 # Release Management
 
 - SHOULD release to production from branch that's used for base of development
