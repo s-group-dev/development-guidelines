@@ -9,10 +9,9 @@
 1. Modify [DEVELOPMENT-GUIDELINES.md](build/DEVELOPMENT-GUIDELINES.md) with latest changes.
 2. Update [CHANGELOG.md](CHANGELOG.md) accordingly with proper versioning.
 3. Run `make build`
-4. Add files and run `git commit`
-5. Run `make release`
-6. Push your changes and create Merge Request to [GitHub](https://github.com/s-group-dev/development-guidelines).
-7. Run `git push origin --tags`
+4. Run `make release`
+5. Push your changes and create Merge Request to [GitHub](https://github.com/s-group-dev/development-guidelines).
+6. Run `git push origin --tags`
 
 ## Versioning
 
