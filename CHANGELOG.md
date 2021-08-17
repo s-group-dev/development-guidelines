@@ -4,6 +4,15 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2021-04-28 [v1.8.0]
+### Added
+- Architecture → Infrastructure -> MUST use tags on cloud resources
+- Architecture → Infrastructure -> MUST have all virtual machines managed by CSP's instance management service (AWS Systems Manager, Azure Automanage, ...)
+- Architecture → Infrastructure -> SHOULD use cloud managed services whenever possible
+- Architecture → Infrastructure → MUST have periodical OS updates for all services not managed by cloud
+- Architecture → Infrastructure → MUST document manually managed virtual machines' maintenance and security processes
+- Environment → Design → SHOULD follow the Principle of Least Privilege
+
 ## 2020-11-24 [v1.7.0]
 ### Added
 - Codebase → Coding Standards → SHOULD use automatic code style checking (linting)
