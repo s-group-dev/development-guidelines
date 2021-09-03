@@ -1,0 +1,53 @@
+name: GitHub Release Workflow
+
+on:
+  push:
+    tags:
+      # Semver-like tags "X.Y.Z"
+      - "[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      # Parse version number from GITHUB_REF: "refs/tags/X.Y.Z" -> "X.Y.Z"
+      - name: Parse git tag
+        id: tag
+        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+      # Extract release notes for version "X.Y.Z"
+      - name: Extract release notes
+        run: make release-notes v=${{ steps.tag.outputs.VERSION }}
+      # Create GitHub Release for tag "X.Y.Z"
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          # Default GitHub Actions token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.VERSION }}
+          release_name: ${{ steps.tag.outputs.VERSION }}
+          body_path: ./build/release/body.txt
+      # Add SOK-DGvX.Y.Z.html to the GitHub Release
+      - name: Upload HTML asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./releases/SOK-DGv${{ steps.tag.outputs.VERSION }}.html
+          asset_name: SOK-DGv${{ steps.tag.outputs.VERSION }}.html
+          asset_content_type: text/html
+      # Add SOK-DGvX.Y.Z.pdf to the GitHub Release
+      - name: Upload PDF asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./releases/SOK-DGv${{ steps.tag.outputs.VERSION }}.pdf
+          asset_name: SOK-DGv${{ steps.tag.outputs.VERSION }}.pdf
+          asset_content_type: application/pdf

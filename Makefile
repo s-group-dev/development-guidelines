@@ -40,6 +40,10 @@ build-html: pre-build ## Build HTML version of document
 		--number-sections
 	ln -sf SOK-DG${VERSION}.html releases/latest.html
 
+.PHONY: release-notes
+release-notes: ## Extract latest release notes for argument v=X.Y.Z
+	./scripts/release-notes.sh $(v)
+
 release:
 	git add CHANGELOG.md
 	git add src/DEVELOPMENT-GUIDELINES.md
