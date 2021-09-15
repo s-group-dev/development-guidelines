@@ -40,11 +40,9 @@ build-html: pre-build ## Build HTML version of document
 		--number-sections
 	ln -sf SOK-DG${VERSION}.html releases/latest.html
 
-.PHONY: release-notes
-release-notes: ## Extract latest release notes for argument v=X.Y.Z
-	./scripts/release-notes.sh $(v)
 
-release:
+.PHONY: release
+release: ## Build release, commit and tag it
 	git add CHANGELOG.md
 	git add src/DEVELOPMENT-GUIDELINES.md
 	git add releases/latest.html
@@ -54,3 +52,7 @@ release:
 	git commit -m "Release $$(echo ${VERSION} | sed 's|^v||')"
 	@git tag $$(echo ${VERSION} | sed 's|^v||')
 	@git tag -n | tail -1
+
+.PHONY: release-notes
+release-notes: ## Extract latest release notes for argument v=X.Y.Z
+	./scripts/release-notes.sh $(v)
