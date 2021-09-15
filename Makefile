@@ -33,7 +33,7 @@ build-html: ## Build HTML version of document
 
 .PHONY: _build-pdf
 _build-pdf: pre-build
-	sed "s|YYYY-MM-DD|${DATE}|g;s|vX.Y.Z|${VERSION}|g" src/_title.md > build/title.md
+	sed "s|YYYY-MM-DD|${DATE}|g;s|vX.Y.Z|${VERSION}|g" src/_title-$(document).md > build/title.md
 	$(DOCKER_CMD) --output releases/SOK-$(document)${VERSION}.pdf \
 		--to=latex \
 		--template=lib/eisvogel.tex \
@@ -41,7 +41,7 @@ _build-pdf: pre-build
 	ln -sf SOK-$(document)${VERSION}.pdf releases/latest-$(document).pdf
 
 _build-html: pre-build 
-	sed "s|YYYY-MM-DD|${DATE}<br />${VERSION}|g" src/_title.md > build/title.md
+	sed "s|YYYY-MM-DD|${DATE}<br />${VERSION}|g" src/_title-$(document).md > build/title.md
 	$(DOCKER_CMD) --output releases/SOK-$(document)${VERSION}.html \
 		--standalone build/title.md build/logo.md src/DEVELOPMENT-GUIDELINES.md \
 		--number-sections
