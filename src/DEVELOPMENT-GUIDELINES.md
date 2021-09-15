@@ -77,11 +77,17 @@
 - SHOULD use cloud managed services whenever possible
 - MUST have periodical OS updates for all services not managed by cloud
 - MUST document manually managed virtual machines' maintenance and security processes
+- MUST encrypt data at rest in cloud
+- MUST rotate encryption keys every 365 days (that are used for data at rest) in cloud 
+- MUST have billing alerts in cloud
+- SHOULD have infrastructure as code
+- MUST have repeatable infrastructure
 
 ## Security
 
 - MUST run automated vulnerability checks for code
 - SHOULD run automated static code analysis for code quality
+- MUST restrict access to development environments from the open internet
 
 # Operations
 
