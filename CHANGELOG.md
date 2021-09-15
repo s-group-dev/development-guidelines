@@ -4,6 +4,15 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2021-09-08 [v1.9.0]
+### Added
+- Architecture → Infrastructure → MUST encrypt data at rest in cloud
+- Architecture → Infrastructure → MUST rotate encryption keys every 365 days (that are used for data at rest) in cloud 
+- Architecture → Infrastructure → MUST have billing alerts in cloud
+- Architecture → Infrastructure → SHOULD have infrastructure as code
+- Architecture → Infrastructure → MUST have repeatable infrastructure
+- Architecture → Security → MUST restrict access to development environments from the open internet
+
 ## 2021-04-28 [v1.8.0]
 ### Added
 - Architecture → Infrastructure -> MUST use tags on cloud resources
