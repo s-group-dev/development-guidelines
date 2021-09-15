@@ -42,7 +42,7 @@ build-html: pre-build ## Build HTML version of document
 
 
 .PHONY: release
-release: ## Build release, commit and tag it
+release: ## Commit release and tag it
 	git add CHANGELOG.md
 	git add src/DEVELOPMENT-GUIDELINES.md
 	git add releases/latest.html
