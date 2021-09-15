@@ -24,25 +24,31 @@ pre-build: init
 build: build-pdf build-html ## Build all version of document
 
 .PHONY: build-pdf
-build-pdf: pre-build ## Build PDF version of document
+build-pdf: ## Build PDF version of document
+	$(MAKE) document=DG _build-pdf
+
+.PHONY: build-html
+build-html: ## Build HTML version of document
+	$(MAKE) document=DG _build-html
+
+.PHONY: _build-pdf
+_build-pdf: pre-build
 	sed "s|YYYY-MM-DD|${DATE}|g;s|vX.Y.Z|${VERSION}|g" src/_title.md > build/title.md
-	$(DOCKER_CMD) --output releases/SOK-DG${VERSION}.pdf \
+	$(DOCKER_CMD) --output releases/SOK-$(document)${VERSION}.pdf \
 		--to=latex \
 		--template=lib/eisvogel.tex \
 		--standalone build/title.md src/DEVELOPMENT-GUIDELINES.md
-	ln -sf SOK-DG${VERSION}.pdf releases/latest.pdf
+	ln -sf SOK-$(document)${VERSION}.pdf releases/latest-$(document).pdf
 
-.PHONY: build-html
-build-html: pre-build ## Build HTML version of document
+_build-html: pre-build 
 	sed "s|YYYY-MM-DD|${DATE}<br />${VERSION}|g" src/_title.md > build/title.md
-	$(DOCKER_CMD) --output releases/SOK-DG${VERSION}.html \
+	$(DOCKER_CMD) --output releases/SOK-$(document)${VERSION}.html \
 		--standalone build/title.md build/logo.md src/DEVELOPMENT-GUIDELINES.md \
 		--number-sections
-	ln -sf SOK-DG${VERSION}.html releases/latest.html
-
+	ln -sf SOK-$(document)${VERSION}.html releases/latest-$(document).html
 
 .PHONY: release
-release: ## Commit release and tag it
+release: build ## Commit release and tag it
 	git add CHANGELOG.md
 	git add src/DEVELOPMENT-GUIDELINES.md
 	git add releases/latest.html
