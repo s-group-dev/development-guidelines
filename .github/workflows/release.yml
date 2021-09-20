@@ -51,3 +51,23 @@ jobs:
           asset_path: ./releases/SOK-DGv${{ steps.tag.outputs.VERSION }}.pdf
           asset_name: SOK-DGv${{ steps.tag.outputs.VERSION }}.pdf
           asset_content_type: application/pdf
+      # Add SOK-AGvX.Y.Z.html to the GitHub Release
+      - name: Upload HTML asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./releases/SOK-AG${{ steps.tag.outputs.VERSION }}.html
+          asset_name: SOK-AGv${{ steps.tag.outputs.VERSION }}.html
+          asset_content_type: text/html
+      # Add SOK-AGvX.Y.Z.pdf to the GitHub Release
+      - name: Upload PDF asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./releases/SOK-AGv${{ steps.tag.outputs.VERSION }}.pdf
+          asset_name: SOK-AGv${{ steps.tag.outputs.VERSION }}.pdf
+          asset_content_type: application/pdf
