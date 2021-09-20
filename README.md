@@ -1,7 +1,10 @@
 # SOK Development Guidelines  ![Latest version](https://img.shields.io/github/v/tag/s-group-dev/development-guidelines)
 
-[![Download PDF](https://img.shields.io/badge/Download-PDF-1A7EBF)](https://s-group-dev.github.io/development-guidelines/releases/latest-DG.pdf)
-[![Download HTML](https://img.shields.io/badge/Download-HTML-26A0EE)](https://s-group-dev.github.io/development-guidelines/releases/latest-DG.html)
+[![Download Development Guidelines PDF](https://img.shields.io/badge/Development_Guidelines-PDF-1A7EBF)](https://s-group-dev.github.io/development-guidelines/releases/latest-DG.pdf)
+[![Download API Guidelines PDF](https://img.shields.io/badge/API_Guidelines-PDF-B63521)](https://s-group-dev.github.io/development-guidelines/releases/latest-AG.pdf)
+
+[![Download API Guidelines HTML](https://img.shields.io/badge/API_Guidelines-HTML-E24329)](https://s-group-dev.github.io/development-guidelines/releases/latest-AG.html)
+[![Download Development Guidelines HTML](https://img.shields.io/badge/Development_Guidelines-HTML-26A0EE)](https://s-group-dev.github.io/development-guidelines/releases/latest-DG.html)
 <img src="assets/calms.png" title="SOK C.A.L.M.S." alt="C.A.L.M.S." align="right" style="margin: 0px 0px 30px 30px" />
 
 This is a high-level documentation containing a collection of best practices, commonalities between projects and values proven to be practical. We're encouraging our own teams to follow these guidelines when implementing their software. Guidelines are developed by SOK development community.

@@ -1,4 +1,3 @@
-
 ---
 title: "SOK API Guidelines"
 author: [Development Community]
@@ -29,10 +28,18 @@ titlepage-rule-color: "FFFFFF"
 titlepage-rule-height: 3
 footer-center: "vX.Y.Z"
 
-
 footnotes-pretty: true
 book: false
 
 toc: true
 toc-own-page: true
+colorlinks: true
+
+header-includes:
+- |
+	\newcommand{\resumetocwriting}{%
+	\addtocontents{toc}{\protect\setcounter{tocdepth}{\arabic{tocdepth}}}}
+- |
+	\newcommand{\stoptocwriting}{%
+	\addtocontents{toc}{\protect\setcounter{tocdepth}{-5}}}
 ...
