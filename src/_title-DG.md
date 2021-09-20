@@ -26,4 +26,5 @@ book: false
 
 toc: true
 toc-own-page: true
+colorlinks: true
 ...
