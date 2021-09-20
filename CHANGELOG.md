@@ -4,6 +4,19 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2021-09-13 [v2.0.0]
+### Added
+#### Development Guidelines
+- Codebase → Architecture → MUST follow common API Guidelines
+#### API Guidelines
+- Principles → RECOMMENDED to read Zalando RESTful API and Event Guidelines as a base and use as a reference
+- Principles → SHOULD implement versioning
+- Principles → MUST have versioning strategy decided prior the first release
+- Principles → RECOMMENDED not use URL versioning
+- Principles → RECOMMENDED to use HTTP Headers to carry version information
+- Principles → RECOMMENDED have version information also in response headers
+- Principles → MUST not break backward compatibility once the version has been released
+
 ## 2021-09-08 [v1.9.0]
 ### Added
 - Architecture → Infrastructure → MUST encrypt data at rest in cloud

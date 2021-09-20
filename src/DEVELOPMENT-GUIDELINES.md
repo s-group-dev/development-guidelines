@@ -36,6 +36,7 @@
 ## Architecture
 
 - MUST have only needed components in production (resources, interfaces, dependencies)
+- MUST follow common API Guidelines
 
 # Release Management
 
