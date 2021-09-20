@@ -21,34 +21,60 @@ pre-build: init
 	docker build -t "development-guidelines" .
 
 .PHONY: build
-build: build-pdf build-html ## Build all version of document
+build: build-dg build-ag ## Build all version of document
 
-.PHONY: build-pdf
-build-pdf: pre-build ## Build PDF version of document
-	sed "s|YYYY-MM-DD|${DATE}|g;s|vX.Y.Z|${VERSION}|g" src/_title.md > build/title.md
-	$(DOCKER_CMD) --output releases/SOK-DG${VERSION}.pdf \
+build-dg: ## Build Development Guidelines versions
+	$(MAKE) build-pdf-dg
+	$(MAKE) build-html-dg
+
+build-ag : ## Build API Guidelines versions
+	$(MAKE) build-pdf-ag
+	$(MAKE) build-html-ag
+
+.PHONY: build-pdf-dg
+build-pdf-dg: ## Build PDF version of Development Guidelines
+	$(MAKE) document=DG source=DEVELOPMENT version=${VERSION} _build-pdf
+
+.PHONY: build-html-dg
+build-html-dg: ## Build HTML version of Development Guidelines
+	$(MAKE) document=DG source=DEVELOPMENT version=${VERSION} _build-html
+
+.PHONY: build-pdf-ag
+build-pdf-ag: ## Build PDF version of API Guidelines
+	$(MAKE) document=AG source=API version=${VERSION} _build-pdf
+
+.PHONY: build-html-ag
+build-html-ag: ## Build HTML version of API Guidelines
+	$(MAKE) document=AG source=API version=${VERSION} _build-html
+
+.PHONY: _build-pdf
+_build-pdf: pre-build
+	sed "s|YYYY-MM-DD|${DATE}|g;s|vX.Y.Z|$(version)|g" src/_title-$(document).md > build/title.md
+	$(DOCKER_CMD) --output releases/SOK-$(document)$(version).pdf \
 		--to=latex \
 		--template=lib/eisvogel.tex \
-		--standalone build/title.md src/DEVELOPMENT-GUIDELINES.md
-	ln -sf SOK-DG${VERSION}.pdf releases/latest.pdf
+		--standalone build/title.md src/$(source)-GUIDELINES.md
+	ln -sf SOK-$(document)$(version).pdf releases/latest-$(document).pdf
 
-.PHONY: build-html
-build-html: pre-build ## Build HTML version of document
-	sed "s|YYYY-MM-DD|${DATE}<br />${VERSION}|g" src/_title.md > build/title.md
-	$(DOCKER_CMD) --output releases/SOK-DG${VERSION}.html \
-		--standalone build/title.md build/logo.md src/DEVELOPMENT-GUIDELINES.md \
+_build-html: pre-build 
+	sed "s|YYYY-MM-DD|${DATE}<br />$(version)|g" src/_title-$(document).md > build/title.md
+	$(DOCKER_CMD) --output releases/SOK-$(document)$(version).html \
+		--standalone build/title.md build/logo-$(document).md src/$(source)-GUIDELINES.md \
 		--number-sections
-	ln -sf SOK-DG${VERSION}.html releases/latest.html
-
+	ln -sf SOK-$(document)$(version).html releases/latest-$(document).html
 
 .PHONY: release
-release: ## Commit release and tag it
+release: build ## Commit release and tag it
 	git add CHANGELOG.md
 	git add src/DEVELOPMENT-GUIDELINES.md
-	git add releases/latest.html
-	git add releases/latest.pdf
+	git add releases/latest-DG.html
+	git add releases/latest-DG.pdf
+	git add releases/latest-AG.html
+	git add releases/latest-AG.pdf
 	git add releases/SOK-DG${VERSION}.html
 	git add releases/SOK-DG${VERSION}.pdf
+	git add releases/SOK-AG${VERSION}.html
+	git add releases/SOK-AG${VERSION}.pdf
 	git commit -m "Release $$(echo ${VERSION} | sed 's|^v||')"
 	@git tag $$(echo ${VERSION} | sed 's|^v||')
 	@git tag -n | tail -1
