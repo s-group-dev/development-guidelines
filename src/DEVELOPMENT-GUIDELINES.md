@@ -7,19 +7,19 @@
 
 - MUST use version control
 - SHOULD use Git
-- MUST use `master` branch as a base for development
+- MUST use `main` branch as a base for development
 - MUST have documented version control flow
 
 ### Branching
 
-- MUST fork feature (and release) branches from `master` branch
+- MUST fork feature (and release) branches from `main` branch
 - SHOULD protect default branch from pushes
 
 #### Mobile development
 
-- SHOULD use fast-forward merges only from feature branch to `master` branch
-- SHOULD implement bug fixes to feature branch and cherry picked them to `master` and potential release branch
-- RECOMMENDED to squash feature branches before merging to `master` branch
+- SHOULD use fast-forward merges only from feature branch to `main` branch
+- SHOULD implement bug fixes to feature branch and cherry picked them to `main` and potential release branch
+- RECOMMENDED to squash feature branches before merging to `main` branch
 - MUST preserve release tags forever
 
 ## Peer Review
@@ -40,7 +40,7 @@
 
 # Release Management
 
-- SHOULD release to production from branch that's used for base of development
+- SHOULD release to production from `main` (trunk)
 - MUST have identifiable releases
 - RECOMMENDED to release smaller changes often over larger merges
 - MUST have (at least) following stages in pipeline (in recommended order): install, test, scan, build, deploy, verify, release
