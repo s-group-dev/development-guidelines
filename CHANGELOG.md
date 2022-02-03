@@ -13,7 +13,7 @@ Start using main as a base for development.
 - Codebase → Version Control → Branching → Mobile Development → SHOULD use fast-forward merges only from feature branch to `[-master-]{+main+}` branch
 - Codebase → Version Control → Branching → Mobile Development SHOULD implement bug fixes to feature branch and cherry picked them to `[-master-]{+main+}` and potential release branch
 - Codebase → Version Control → Branching → Mobile Development RECOMMENDED to squash feature branches before merging to `[-master-]{+main+}` branch
-- Release Management → SHOULD release to production from `[-master-]{+main+}` (trunk)
+- Release Management → SHOULD release to production from `[-branch that's used for base of development-]{+main (trunk)+}` 
 
 ## 2021-09-13 [v2.0.0]
 ### Added
