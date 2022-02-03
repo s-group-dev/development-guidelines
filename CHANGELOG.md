@@ -4,6 +4,17 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2022-02-01 [v2.0.1]
+### Changed
+#### Development Guidelines
+Start using main as a base for development.
+- Codebase → Version Control → MUST use `[-master-]{+main+}` branch as a base for development
+- Codebase → Version Control → Branching → MUST fork feature (and release) branches from `[-master-]{+main+}` branch
+- Codebase → Version Control → Branching → Mobile Development → SHOULD use fast-forward merges only from feature branch to `[-master-]{+main+}` branch
+- Codebase → Version Control → Branching → Mobile Development SHOULD implement bug fixes to feature branch and cherry picked them to `[-master-]{+main+}` and potential release branch
+- Codebase → Version Control → Branching → Mobile Development RECOMMENDED to squash feature branches before merging to `[-master-]{+main+}` branch
+- Release Management → SHOULD release to production from `[-branch that's used for base of development-]{+main (trunk)+}` 
+
 ## 2021-09-13 [v2.0.0]
 ### Added
 #### Development Guidelines
