@@ -4,6 +4,15 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2022-02-04 [v2.1.0]
+### Added
+#### Development Guidelines
+- Architecture → Compliance → MUST ensure that company policy regarding cookie classification and consents are followed (if applicable)
+- Architecture → Compliance → MUST document all personal data used in testing and development, backups and log data
+- Architecture → Compliance → MUST have required monitoring functionalities concerning usage of personal data based on data classification
+- Architecture → Compliance → MUST ensure that only necessary personal data will be collected and/or processed
+- Architecture → Compliance → MUST implement functionality for defining retention times for all personal data
+
 ## 2022-02-01 [v2.0.1]
 ### Changed
 #### Development Guidelines

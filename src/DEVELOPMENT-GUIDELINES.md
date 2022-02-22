@@ -90,6 +90,14 @@
 - SHOULD run automated static code analysis for code quality
 - MUST restrict access to development environments from the open internet
 
+## Compliance
+
+- MUST ensure that company policy regarding cookie classification and consents are followed (if applicable)
+- MUST document all personal data used in testing and development, backups and log data
+- MUST have required monitoring functionalities concerning usage of personal data based on data classification 
+- MUST ensure that only necessary personal data will be collected and/or processed
+- MUST implement functionality for defining retention times for all personal data
+
 # Operations
 
 ## Monitoring
