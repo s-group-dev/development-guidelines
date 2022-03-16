@@ -37,6 +37,7 @@
 
 - MUST have only needed components in production (resources, interfaces, dependencies)
 - MUST follow common API Guidelines
+- MUST make your technology choices visible in SOK's [Tech Radar](https://s-group-dev.github.io/tech-radar/)
 
 # Release Management
 
@@ -93,10 +94,12 @@
 ## Compliance
 
 - MUST ensure that company policy regarding cookie classification and consents are followed (if applicable)
+- MUST document the application architecture, personal data flows and needed security measures to ensure compliance with business, privacy and information security requirements
 - MUST document all personal data used in testing and development, backups and log data
 - MUST have required monitoring functionalities concerning usage of personal data based on data classification 
 - MUST ensure that only necessary personal data will be collected and/or processed
 - MUST implement functionality for defining retention times for all personal data
+- MUST be able to erase (or anonymize) all (or partial) personal data on expiration or when requested by data subject
 
 # Operations
 
