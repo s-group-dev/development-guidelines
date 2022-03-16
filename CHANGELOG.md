@@ -4,6 +4,13 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2022-03-16 [v2.2.0]
+### Added
+#### Development Guidelines
+- Architecture → Compliance → MUST document the application architecture, personal data flows and needed security measures to ensure compliance with business, privacy and information security requirements
+- Architecture → Compliance MUST be able to erase (or anonymize) all (or partial) personal data on expiration or when requested by data subject
+- Architecture → MUST make your technology choices visible in SOK's Tech Radar
+
 ## 2022-02-04 [v2.1.0]
 ### Added
 #### Development Guidelines
