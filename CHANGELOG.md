@@ -4,6 +4,19 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2022-04-29 [v2.3.0]
+### Added
+#### Development Guidelines
+- Operations → Monitoring → SHOULD provide uptime metric(s) for a service
+- Quality Assurance → SHOULD have documented test strategy
+- Quality Assurance → MUST have strategy for test automation and automatic tests designed based on it
+- Quality Assurance → Automation → SHOULD develop, use and share common solutions (at least) internally for test automation
+- Quality Assurance → Automation → RECOMMENDED  to consider existing solutions before looking for a new one
+## Removed
+#### Development Guidelines
+- Quality Assurance → Automation → MUST have some automatic tests for the service that are repeatable
+- Quality Assurance → Documentation → SHOULD have documented test strategy and which parts of codebase are tested
+
 ## 2022-03-16 [v2.2.0]
 ### Added
 #### Development Guidelines
