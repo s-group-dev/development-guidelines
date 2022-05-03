@@ -128,4 +128,5 @@
 
 - SHOULD develop, use and share common solutions (at least) internally for test automation
 - RECOMMENDED  to consider existing solutions before looking for a new one
-- RECOMMENDED to run tests for all code changes
+- RECOMMENDED to run tests for all code changes as part of CI/CD pipeline
+
