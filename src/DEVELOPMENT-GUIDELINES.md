@@ -107,6 +107,7 @@
 
 - MUST have monitoring
 - MUST have alarms
+- SHOULD provide uptime metric(s) for a service
 
 # Guidance
 
@@ -120,11 +121,11 @@
 
 # Quality Assurance
 
+- SHOULD have documented test strategy
+- MUST have strategy for test automation and automatic tests designed based on it
+
 ## Automation
 
-- MUST have some automatic tests for the service that are repeatable
+- SHOULD develop, use and share common solutions (at least) internally for test automation
+- RECOMMENDED  to consider existing solutions before looking for a new one
 - RECOMMENDED to run tests for all code changes
-
-## Documentation
-
-- SHOULD have documented test strategy and which parts of codebase are tested
