@@ -6,7 +6,7 @@ _dv_sed = sed 's|^\#* \(.*\) \[\(.*\)\]|\1 \2|'
 DATE = $$($(_dv_regex) | $(_dv_sed) | cut -d' ' -f1)
 VERSION = $$($(_dv_regex) | $(_dv_sed) | cut -d' ' -f2)
 
-DOCKER_CMD = docker run --rm --volume "${PWD}:/data" "development-guidelines" --from=markdown --listings
+DOCKER_CMD = podman run --rm --volume "${PWD}:/data" "development-guidelines" --from=markdown --listings
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":[^#]*?## "}; {printf "\033[36m%-50s\033[0m %s\n", $$1, $$2}'
@@ -18,7 +18,7 @@ init:
 pre-build: init
 	rm -rf build/
 	cp -rv src build
-	docker build -t "development-guidelines" .
+	podman build -t "development-guidelines" .
 
 .PHONY: build
 build: build-dg build-ag ## Build all version of document

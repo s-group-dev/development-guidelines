@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Development Community" />
+  <meta name="keywords" content="api, guidelines" />
+  <title>SOK API Guidelines</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  
+  
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">SOK API Guidelines</h1>
+<p class="subtitle"><p><em>A handbook created by developers for
+developers to help engineering teams align their software practices and
+share know-how.</em></p></p>
+<p class="author">Development Community</p>
+<p class="date">2022-06-05<br />v2.4.0</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>APIs are the new normal when it comes to modern software architecture
+since they enable decoupling and easy communication between services.
+APIs are easy to own, deploy and operate by our teams, so we want to
+help our engineers with some guidelines to help them design, implement
+and maintain their APIs.</p>
+<p>Our APIs enable us to build platforms that support our business
+needs. API First approach should be adopted in order to support those
+needs in a clear and structured way. API definition starts outside the
+code and ideally involves all actors that are relevant to the domain.
+API First encompasses a set of quality-related standards and fosters a
+peer review culture including a lightweight review procedure. We
+encourage our teams to follow them to ensure that our APIs:</p>
+<ul>
+<li>are easy to understand and learn</li>
+<li>are general and abstracted from specific implementation and use
+cases</li>
+<li>are robust and easy to use</li>
+<li>have a common look and feel</li>
+<li>are consistent with other teams’ APIs and our global
+architecture</li>
+</ul>
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+
+</nav>
+<p style="text-align:center">
+<img src="../assets/S-Logo.png" style="clear:both" />
+</p>
+<p>APIs are the new normal when it comes to modern software architecture
+since they enable decoupling and easy communication between services.
+APIs are easy to own, deploy and operate by our teams, so we want to
+help our engineers with some guidelines to help them design, implement
+and maintain their APIs.</p>
+<blockquote>
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
+“SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this
+document are to be interpreted as described in <a
+href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
+</blockquote>
+<h1 data-number="1" id="principles"><span
+class="header-section-number">1</span> Principles</h1>
+<ul>
+<li>RECOMMENDED to read <a
+href="https://opensource.zalando.com/restful-api-guidelines/">Zalando
+RESTful API and Event Guidelines</a> as a base and use as a
+reference</li>
+<li>SHOULD implement versioning</li>
+<li>MUST have versioning strategy decided prior the first release</li>
+<li>RECOMMENDED not use URL versioning</li>
+<li>RECOMMENDED to use HTTP Headers to carry version information</li>
+<li>RECOMMENDED have version information also in response headers</li>
+<li>MUST not break backward compatibility once the version has been
+released</li>
+</ul>
+<h1 data-number="2" id="appendix-1"><span
+class="header-section-number">2</span> Appendix 1</h1>
+<h2 data-number="2.1" id="commentary"><span
+class="header-section-number">2.1</span> Commentary</h2>
+<h3 data-number="2.1.1" id="resource"><span
+class="header-section-number">2.1.1</span> Resource</h3>
+<p>A resource is a conceptual mapping to a set of entities, not the
+entity that corresponds to the mapping at any particular point in time.
+In other word, resource is unique and anything with an URL and entity is
+its representation of that resource in current time when requested.</p>
+<p>Even though we’re recommending to adapt some of <a
+href="https://opensource.zalando.com/restful-api-guidelines/">Zalando’s
+good practices</a>, we’re not saying your APIs should be RESTful (but
+they can be!) or just <a
+href="https://kieranpotts.com/rebranding-rest/">APIs built with good old
+conventions with HTTP semantics on distributed World Wide Web</a>.</p>
+</body>
+</html>

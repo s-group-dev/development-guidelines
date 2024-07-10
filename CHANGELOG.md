@@ -4,10 +4,19 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
+## 2022-06-05 [v2.4.0]
+### Added
+#### Development Guidelines
+- Architecture → Security → SHOULD conduct threat modelling when the security model of the software changes
+### Changed
+#### Development Guidelines
+- Architecture → Security → MUST run automated vulnerability for code `{+and fix or mitigate the findings+}`
+- Architecture → Security → MUST restrict `{+unnecessary+}` access to `[-development-]` environments `{+and endpoints+}` from the open internet
+
 ## 2022-04-29 [v2.3.1]
 ### Changed
 #### Development Guidelines
-- Quality Assurance → Automation → RECOMMENDED to run tests for all code changes as part of CI/CD pipeline {+as part of CI/CD pipeline+}
+- Quality Assurance → Automation → RECOMMENDED to run tests for all code changes `{+as part of CI/CD pipeline+}`
 
 ## 2022-04-29 [v2.3.0]
 ### Added

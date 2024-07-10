@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Development Community" />
+  <meta name="keywords" content="development, guidelines" />
+  <title>SOK Development Guidelines</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    div.abstract {
+      margin: 2em 2em 2em 2em;
+      text-align: left;
+      font-size: 85%;
+    }
+    div.abstract-title {
+      font-weight: bold;
+      text-align: center;
+      padding: 0;
+      margin-bottom: 0.5em;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">SOK Development Guidelines</h1>
+<p class="subtitle"><p><em>A handbook created by developers for
+developers to help engineering teams align their software practices and
+share know-how.</em></p></p>
+<p class="author">Development Community</p>
+<p class="date">2022-06-05<br />v2.4.0</p>
+<div class="abstract">
+<div class="abstract-title">Abstract</div>
+<p>This is a high-level document containing a collection of best
+practices, commonalities between projects and values proven to be
+practical. Team’s should follow these guidelines when implementing their
+software.</p>
+</div>
+</header>
+<nav id="TOC" role="doc-toc">
+
+</nav>
+<p style="text-align:center">
+<img src="../assets/S-Logo.png" style="clear:both" />
+</p>
+<p>This is a high-level document containing a collection of best
+practices, commonalities between projects and values proven to be
+practical. Team’s should follow these guidelines when implementing their
+software.</p>
+<blockquote>
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”,
+“SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this
+document are to be interpreted as described in <a
+href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
+</blockquote>
+<h1 data-number="1" id="codebase"><span
+class="header-section-number">1</span> Codebase</h1>
+<h2 data-number="1.1" id="version-control"><span
+class="header-section-number">1.1</span> Version Control</h2>
+<ul>
+<li>MUST use version control</li>
+<li>SHOULD use Git</li>
+<li>MUST use <code>main</code> branch as a base for development</li>
+<li>MUST have documented version control flow</li>
+</ul>
+<h3 data-number="1.1.1" id="branching"><span
+class="header-section-number">1.1.1</span> Branching</h3>
+<ul>
+<li>MUST fork feature (and release) branches from <code>main</code>
+branch</li>
+<li>SHOULD protect default branch from pushes</li>
+</ul>
+<h4 data-number="1.1.1.1" id="mobile-development"><span
+class="header-section-number">1.1.1.1</span> Mobile development</h4>
+<ul>
+<li>SHOULD use fast-forward merges only from feature branch to
+<code>main</code> branch</li>
+<li>SHOULD implement bug fixes to feature branch and cherry picked them
+to <code>main</code> and potential release branch</li>
+<li>RECOMMENDED to squash feature branches before merging to
+<code>main</code> branch</li>
+<li>MUST preserve release tags forever</li>
+</ul>
+<h2 data-number="1.2" id="peer-review"><span
+class="header-section-number">1.2</span> Peer Review</h2>
+<ul>
+<li>MUST have a process for peer review</li>
+<li>SHOULD have another developer to approve code changes before
+executed in production</li>
+</ul>
+<h2 data-number="1.3" id="coding-standards"><span
+class="header-section-number">1.3</span> Coding Standards</h2>
+<ul>
+<li>MUST agree on a coding standard inside a team</li>
+<li>RECOMMENDED use automatic code formatting</li>
+<li>SHOULD use automatic code style checking (linting)</li>
+</ul>
+<h2 data-number="1.4" id="architecture"><span
+class="header-section-number">1.4</span> Architecture</h2>
+<ul>
+<li>MUST have only needed components in production (resources,
+interfaces, dependencies)</li>
+<li>MUST follow common API Guidelines</li>
+<li>MUST make your technology choices visible in SOK’s <a
+href="https://s-group-dev.github.io/tech-radar/">Tech Radar</a></li>
+</ul>
+<h1 data-number="2" id="release-management"><span
+class="header-section-number">2</span> Release Management</h1>
+<ul>
+<li>SHOULD release to production from <code>main</code> (trunk)</li>
+<li>MUST have identifiable releases</li>
+<li>RECOMMENDED to release smaller changes often over larger merges</li>
+<li>MUST have (at least) following stages in pipeline (in recommended
+order): install, test, scan, build, deploy, verify, release</li>
+</ul>
+<h2 data-number="2.1" id="mobile-development-1"><span
+class="header-section-number">2.1</span> Mobile Development</h2>
+<ul>
+<li>MUST use semantic versioning for releases (tags)</li>
+</ul>
+<h1 data-number="3" id="environments"><span
+class="header-section-number">3</span> Environments</h1>
+<h2 data-number="3.1" id="data"><span
+class="header-section-number">3.1</span> Data</h2>
+<h3 data-number="3.1.1" id="mobile-development-2"><span
+class="header-section-number">3.1.1</span> Mobile Development</h3>
+<ul>
+<li>SHOULD preserve all release artefacts forever</li>
+</ul>
+<h2 data-number="3.2" id="design"><span
+class="header-section-number">3.2</span> Design</h2>
+<ul>
+<li>SHOULD name AWS profiles after account-aliases</li>
+<li>MUST have production separated from testing environments</li>
+<li>SHOULD follow the Principle of Least Privilege</li>
+</ul>
+<h1 data-number="4" id="architecture-1"><span
+class="header-section-number">4</span> Architecture</h1>
+<ul>
+<li>MUST document all intentionally integrated 3rd party provided
+services used by the application</li>
+<li>MUST document selected development management tools and purpose of
+tools</li>
+</ul>
+<h2 data-number="4.1" id="infrastructure"><span
+class="header-section-number">4.1</span> Infrastructure</h2>
+<ul>
+<li>SHOULD use semantic versioned Docker images for building
+releases</li>
+<li>MUST have centralised logging</li>
+<li>SHOULD collect logs from all deployed environments</li>
+<li>MUST use tags on cloud resources</li>
+<li>MUST have all virtual machines managed by CSP’s instance management
+service (AWS Systems Manager, Azure Automanage, …)</li>
+<li>SHOULD use cloud managed services whenever possible</li>
+<li>MUST have periodical OS updates for all services not managed by
+cloud</li>
+<li>MUST document manually managed virtual machines’ maintenance and
+security processes</li>
+<li>MUST encrypt data at rest in cloud</li>
+<li>MUST rotate encryption keys every 365 days (that are used for data
+at rest) in cloud</li>
+<li>MUST have billing alerts in cloud</li>
+<li>SHOULD have infrastructure as code</li>
+<li>MUST have repeatable infrastructure</li>
+</ul>
+<h2 data-number="4.2" id="security"><span
+class="header-section-number">4.2</span> Security</h2>
+<ul>
+<li>MUST run automated vulnerability checks for code and fix or mitigate
+the findings</li>
+<li>SHOULD run automated static code analysis for code quality</li>
+<li>MUST restrict unnecessary access to environments and endpoints from
+the open internet</li>
+<li>SHOULD conduct threat modelling when the security model of the
+software changes</li>
+</ul>
+<h2 data-number="4.3" id="compliance"><span
+class="header-section-number">4.3</span> Compliance</h2>
+<ul>
+<li>MUST ensure that company policy regarding cookie classification and
+consents are followed (if applicable)</li>
+<li>MUST document the application architecture, personal data flows and
+needed security measures to ensure compliance with business, privacy and
+information security requirements</li>
+<li>MUST document all personal data used in testing and development,
+backups and log data</li>
+<li>MUST have required monitoring functionalities concerning usage of
+personal data based on data classification</li>
+<li>MUST ensure that only necessary personal data will be collected
+and/or processed</li>
+<li>MUST implement functionality for defining retention times for all
+personal data</li>
+<li>MUST be able to erase (or anonymize) all (or partial) personal data
+on expiration or when requested by data subject</li>
+</ul>
+<h1 data-number="5" id="operations"><span
+class="header-section-number">5</span> Operations</h1>
+<h2 data-number="5.1" id="monitoring"><span
+class="header-section-number">5.1</span> Monitoring</h2>
+<ul>
+<li>MUST have monitoring</li>
+<li>MUST have alarms</li>
+<li>SHOULD provide uptime metric(s) for a service</li>
+</ul>
+<h1 data-number="6" id="guidance"><span
+class="header-section-number">6</span> Guidance</h1>
+<ul>
+<li>MUST have process how to handle security notifications</li>
+</ul>
+<h2 data-number="6.1" id="documentation"><span
+class="header-section-number">6.1</span> Documentation</h2>
+<ul>
+<li>SHOULD use README.md as a central information document inside code
+repository</li>
+<li>SHOULD document all exceptions with reasoning from Development
+Guidelines in project’s README.md</li>
+<li>MUST have a documented disaster recovery plan</li>
+</ul>
+<h1 data-number="7" id="quality-assurance"><span
+class="header-section-number">7</span> Quality Assurance</h1>
+<ul>
+<li>SHOULD have documented test strategy</li>
+<li>MUST have strategy for test automation and automatic tests designed
+based on it</li>
+</ul>
+<h2 data-number="7.1" id="automation"><span
+class="header-section-number">7.1</span> Automation</h2>
+<ul>
+<li>SHOULD develop, use and share common solutions (at least) internally
+for test automation</li>
+<li>RECOMMENDED to consider existing solutions before looking for a new
+one</li>
+<li>RECOMMENDED to run tests for all code changes as part of CI/CD
+pipeline</li>
+</ul>
+</body>
+</html>
