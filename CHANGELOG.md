@@ -4,7 +4,7 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
-## 2022-06-05 [v2.4.0]
+## 2024-06-05 [v2.4.0]
 ### Added
 #### Development Guidelines
 - Architecture → Security → SHOULD conduct threat modelling when the security model of the software changes
