@@ -23,6 +23,7 @@ While doing so, please respect the following scheme:
   - If the main section comes empty after removing the last rule, increase a MAJOR version
 - Modifying some existing rule, but not changing its semantics increases PATCH version
 - Moving existing rules from section to another, increase PATCH version
+- Creating or removing a new document increases a MAJOR version
 - Increasing any number sould always be in it's own release. Only update one at time
 
 Versioning has `v` prefix and starts from `v1.0.0`.
