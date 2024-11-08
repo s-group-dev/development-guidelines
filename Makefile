@@ -21,7 +21,7 @@ pre-build: init
 	docker build -t "development-guidelines" .
 
 .PHONY: build
-build: build-dg build-ag ## Build all version of document
+build: build-dg build-ag build-mg ## Build all version of document
 
 build-dg: ## Build Development Guidelines versions
 	$(MAKE) build-pdf-dg
@@ -30,6 +30,10 @@ build-dg: ## Build Development Guidelines versions
 build-ag : ## Build API Guidelines versions
 	$(MAKE) build-pdf-ag
 	$(MAKE) build-html-ag
+
+build-mg: ## Build Mobile Guidelines versions
+	$(MAKE) build-pdf-mg
+	$(MAKE) build-html-mg
 
 .PHONY: build-pdf-dg
 build-pdf-dg: ## Build PDF version of Development Guidelines
@@ -46,6 +50,14 @@ build-pdf-ag: ## Build PDF version of API Guidelines
 .PHONY: build-html-ag
 build-html-ag: ## Build HTML version of API Guidelines
 	$(MAKE) document=AG source=API version=${VERSION} _build-html
+
+.PHONY: build-pdf-mg
+build-pdf-mg : ## Build PDF version of Mobile Guidelines
+	$(MAKE) document=MG source=MOBILE version=${VERSION} _build-pdf
+
+.PHONY: build-html-mg
+build-html-md: ## Build HTML version of Mobile Guidelines
+	$(MAKE) document=MG source=MOBILE version=${VERSION} _build-html
 
 .PHONY: _build-pdf
 _build-pdf: pre-build
@@ -67,14 +79,20 @@ _build-html: pre-build
 release: build ## Commit release and tag it
 	git add CHANGELOG.md
 	git add src/DEVELOPMENT-GUIDELINES.md
+	git add src/API-GUIDELINES.md
+	git add src/MOBILE-GUIDELINES.md
 	git add releases/latest-DG.html
 	git add releases/latest-DG.pdf
 	git add releases/latest-AG.html
 	git add releases/latest-AG.pdf
+	git add releases/latest-MG.html
+	git add releases/latest-MG.pdf
 	git add releases/SOK-DG${VERSION}.html
 	git add releases/SOK-DG${VERSION}.pdf
 	git add releases/SOK-AG${VERSION}.html
 	git add releases/SOK-AG${VERSION}.pdf
+	git add releases/SOK-MG${VERSION}.html
+	git add releases/SOK-MG${VERSION}.pdf
 	git commit -m "Release $$(echo ${VERSION} | sed 's|^v||')"
 	@git tag $$(echo ${VERSION} | sed 's|^v||')
 	@git tag -n | tail -1
