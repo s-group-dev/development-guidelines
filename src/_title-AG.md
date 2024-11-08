@@ -22,7 +22,7 @@ abstract: |
 	- are consistent with other teams’ APIs and our global architecture
 
 titlepage: true
-titlepage-color: "006DB8"
+titlepage-color: "018743"
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "FFFFFF"
 titlepage-rule-height: 3
