@@ -56,7 +56,7 @@ build-pdf-mg : ## Build PDF version of Mobile Guidelines
 	$(MAKE) document=MG source=MOBILE version=${VERSION} _build-pdf
 
 .PHONY: build-html-mg
-build-html-md: ## Build HTML version of Mobile Guidelines
+build-html-mg: ## Build HTML version of Mobile Guidelines
 	$(MAKE) document=MG source=MOBILE version=${VERSION} _build-html
 
 .PHONY: _build-pdf
