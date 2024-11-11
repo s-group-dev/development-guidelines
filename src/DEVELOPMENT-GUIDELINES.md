@@ -9,18 +9,8 @@
 - SHOULD use Git
 - MUST use `main` branch as a base for development
 - MUST have documented version control flow
-
-### Branching
-
 - MUST fork feature (and release) branches from `main` branch
 - SHOULD protect default branch from pushes
-
-#### Mobile development
-
-- SHOULD use fast-forward merges only from feature branch to `main` branch
-- SHOULD implement bug fixes to feature branch and cherry picked them to `main` and potential release branch
-- RECOMMENDED to squash feature branches before merging to `main` branch
-- MUST preserve release tags forever
 
 ## Peer Review
 
@@ -46,17 +36,7 @@
 - RECOMMENDED to release smaller changes often over larger merges
 - MUST have (at least) following stages in pipeline (in recommended order): install, test, scan, build, deploy, verify, release
 
-## Mobile Development
-
-- MUST use semantic versioning for releases (tags)
-
 # Environments
-
-## Data
-
-### Mobile Development
-
-- SHOULD preserve all release artefacts forever
 
 ## Design
 
@@ -130,4 +110,3 @@
 - SHOULD develop, use and share common solutions (at least) internally for test automation
 - RECOMMENDED  to consider existing solutions before looking for a new one
 - RECOMMENDED to run tests for all code changes as part of CI/CD pipeline
-

@@ -15,7 +15,7 @@ abstract: |
 	This is a high-level document containing a collection of best practices, commonalities between projects and values proven to be practical. Team's should follow these guidelines when implementing their software.
 
 titlepage: true
-titlepage-color: "02A946"
+titlepage-color: "00AA46"
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "FFFFFF"
 titlepage-rule-height: 3

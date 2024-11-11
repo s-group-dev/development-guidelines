@@ -4,7 +4,29 @@ All approved changes to Development Guidelines will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this log versions changes with date in `YYYY-MM-DD` format.
 
-## 2022-06-05 [v2.4.0]
+## 2024-11-05 [v3.0.0]
+### Added
+#### Mobile Guidelines
+- Codebase → Version Control → SHOULD use fast-forward merges only from feature branch to main branch
+- Codebase → Version Control → SHOULD implement bug fixes to feature branch and cherry picked them to main and potential release branch
+- Codebase → Version Control → RECOMMENDED to squash feature branches before merging to main branch
+- Codebase → Version Control → MUST preserve release tags forever
+- Release Management → MUST use semantic versioning for releases (tags)
+- Environments → Data → SHOULD preserve all release artefacts forever
+### Changed
+#### Development Guidelines
+- Codebase → Version Control`[- → Branching-]` → MUST fork feature (and release) branches from main branch
+- Codebase → Version Control`[- → Branching-]` → SHOULD protect default branch from pushes
+### Removed
+#### Development Guidelines
+- Codebase → Version Control → Branching → Mobile Development → SHOULD use fast-forward merges only from feature branch to main branch
+- Codebase → Version Control → Branching → Mobile Development → SHOULD implement bug fixes to feature branch and cherry picked them to main and potential release branch
+- Codebase → Version Control → Branching → Mobile Development → RECOMMENDED to squash feature branches before merging to main branch
+- Codebase → Version Control → Branching → Mobile Development → MUST preserve release tags forever
+- Release Management → Mobile Development → MUST use semantic versioning for releases (tags)
+- Environments → Data → Mobile Development → SHOULD preserve all release artefacts forever
+
+## 2024-06-05 [v2.4.0]
 ### Added
 #### Development Guidelines
 - Architecture → Security → SHOULD conduct threat modelling when the security model of the software changes
